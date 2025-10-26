@@ -2,7 +2,7 @@ FROM ubuntu:latest as build
 
 RUN apt-get update
 RUN apt-get install open-jdk-17-jdk -y
-COPY . .
+COPY src .
 
 RUN apt-get install maven -y
 RUN mvn clean install
