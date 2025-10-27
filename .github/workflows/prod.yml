@@ -24,4 +24,4 @@ jobs:
       - name: build docker image
         run: docker build -t ${{ secrets.DOCKER_USERNAME }}/gestao-vagas .
       - name: publish image
-        runL: docker push ${{ secrets.DOCKER_USERNAME }}/gestao-vagas
+        run: docker push ${{ secrets.DOCKER_USERNAME }}/gestao-vagas
