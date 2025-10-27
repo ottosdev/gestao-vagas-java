@@ -35,8 +35,3 @@ jobs:
         run: docker rm -f gestao-vagas
       - name: run docker container
         run: docker run -d -p 8080:8080 -e DATABASE_URL=${{secrets.DATABASE_URL}} -e DATABASE_PASSWORD=${{secrets.DATABASE_PASSWORD}} -e  ${{ secrets.DATABASE_USERNAME }} --name gestao-vagas ${{ secrets.DOCKER_USERNAME }}/gestao-vagas
-        with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.KEY }}
-          script: |
